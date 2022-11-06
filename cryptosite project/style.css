@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/* To change the background of header*/
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image :url("https://t3.ftcdn.net/jpg/04/92/73/28/360_F_492732884_lIfYjpLvVxJI9aww7URzBBYdGmv54ynQ.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    } 
+/* To create navigation bar*/
+    .nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    /* To change the allignment of navigation bar*/
+    .nav-links{
+        flex: 1;
+        text-align: left;
+    }
+    /* To design the links in navigation bar*/
+    .nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+    /* To change the text present in navigation bar*/
+    .nav-links ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    
+    }
+    /* To give underline effect for the links in navigation bar*/
+    .nav-links ul li::after{
+        content: '';
+        width:0%;
+        height: 2px;
+        background: aqua;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    .nav-links ul li:hover:after{
+    width: 100%;
+    }
+    /* Allignment of the text*/
+    .content{
+        margin-top: 6%;
+        margin-left: 80px;
+    }
+    /* To decorate the font*/
+    .content h1{
+        font-size: 80px;
+        margin-bottom: 15Ppx;
+        white-space: nowrap;
+        color: #fff;
+    }
+    /* To change the color of the heading written in span tag*/
+    .content h1 span{
+        color: aqua;
+    }
+    /* Decoration of paragraph*/
+    .content p{
+        line-height: 150%;
+        white-space: nowrap;
+        font-size: 20px;
+        color: aliceblue;
+    }
+    /* Decoration of the botton in the content section*/
+    .content .btn{
+        display: inline-block;
+        margin-top: 30px;
+        background: rgb(130, 171, 171);
+        color: black;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        white-space: nowrap;
+      
+    }
+    /* To allign the coin list*/
+    .coin-list{
+        position: absolute;
+        left: 10%;
+        bottom: 30px;
+        display: flex;
+        align-items: center;
+    }
+    /* to the decoration of coins and the text*/
+    .coin{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin: 0 15px;
+        color: aqua;
+        border: 1px solid #fff;
+        padding: 20px 30px;
+        border-radius: 8px;
+    }
+    /* To decorate the img in coin block*/
+    .coin img{
+        width: 40px;
+        margin-right: 10px;
+    }
+    /* To the heading in coin block*/
+    .coin h3{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+/* To allign and decorate the aboutus section*/
+    .footer{
+        width: 100;
+        text-align: center;
+        padding: 30px 0;
+        }
+        
+        .footer:h2{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-size: 600;
+        }
+/* To design and allign the social media icons*/
+        .wrapper .icon{
+            position: relative;
+            background-color: grey;
+            border-radius: 50%;
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 22px;
+            display: inline-block;
+            align-items: center;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            color: #333;
+            text-decoration: none;
+          }
+          .wrapper .tooltip {
+            position: absolute;
+            top: 0;
+            line-height: 1.5;
+            font-size: 14px;
+            background-color: #ffffff;
+            color: #ffffff;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+          .wrapper .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background-color: #ffffff;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+          .wrapper .icon:hover .tooltip {
+            top: -45px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+          .wrapper .icon:hover span,
+          .wrapper .icon:hover .tooltip {
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+          }
+          .wrapper .facebook:hover,
+          .wrapper .facebook:hover .tooltip,
+          .wrapper .facebook:hover .tooltip::before {
+            background-color: #3b5999;
+            color: #ffffff;
+          }
+          .wrapper .twitter:hover,
+          .wrapper .twitter:hover .tooltip,
+          .wrapper .twitter:hover .tooltip::before {
+            background-color: #46c1f6;
+            color: #ffffff;
+          }
+          .wrapper .instagram:hover,
+          .wrapper .instagram:hover .tooltip,
+          .wrapper .instagram:hover .tooltip::before {
+            background-color: #e1306c;
+            color: #ffffff;
+          }
+          .wrapper .github:hover,
+          .wrapper .github:hover .tooltip,
+          .wrapper .github:hover .tooltip::before {
+            background-color: #333333;
+            color: #ffffff;
+          }
+          .wrapper .youtube:hover,
+          .wrapper .youtube:hover .tooltip,
+          .wrapper .youtube:hover .tooltip::before {
+            background-color: #de463b;
+            color: #ffffff;
+          }
+
